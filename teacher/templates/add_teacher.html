@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+		<style>
+body {
+
+	background-color:	#C0C0C0;
+	background-image: url(../templates/image/bgpic.jpg);
+
+
+}
+.container{
+	max-width: 800px;
+	min-height: 400px;
+	margin:0 auto;
+	background-color:rgba(255,255,255,0.3);
+	/*border-radius: 10px;*/
+}
+.container h2{
+	margin:5px;
+	color: black;
+	text-align: center;
+	border-radius: 10px;
+}
+.container form{
+	height: 400px;
+	padding:30px;
+	margin: 0px;
+	border-radius:;
+	background-color:rgba(255,255,255,0.3);
+	background:linear-gradient(35deg,rgb( 204, 255, 255),rgb(255,204,204));
+	}
+</style>
+	<title>Teachers form</title>
+</head>
+<body>
+	<div class="container">
+<h2>Teacher Registration</h2>
+<form method="POST">{% csrf_token %} 
+	{{form.as_p}}
+
+<input type="Submit" name="submit"></input>
+</div>
+</form>
+</body>
+</html>

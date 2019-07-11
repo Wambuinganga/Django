@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>studentsdetails</title>
+</head>
+<body>
+	
+	{{student.first_name}}
+	{{student.registration_number}}
+	{{student.email}}
+
+	<img src="{{student.profile_image.url}}"/>
+	<td><a href="/student/edit/{{student.pk}}/">Edit details</a></td>
+	
+
+</body>
+</html>
