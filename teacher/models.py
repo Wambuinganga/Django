@@ -10,6 +10,7 @@ class Teacher(models.Model):
 	email=models.EmailField(max_length=50)
 	date_joined=models.DateField()
 	profession=models.CharField(max_length=50)
+	image=models.ImageField(upload_to="teacher_image",blank=True)	
 
 	def __str__(self):
 		return self.first_name

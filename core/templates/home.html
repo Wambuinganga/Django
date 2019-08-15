@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome!!</title>
+</head>
+<body>
+	{% if user.is_authenticated %}
+	Welcome Home {{user.name}} !
+	<br>
+	<br>
+	<a href="accounts/logout/">Logout</a>
+	
+
+	{% else%}
+	You are new here! 
+	<br>
+	<br>
+	Please<a href="accounts/register/">Register</a>
+	<br>
+	<br>
+	or <a href="accounts/login/">Login</a>
+
+	{% endif %}
+
+
+
+</body>
+</html>

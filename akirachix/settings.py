@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'registration',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,6 +45,8 @@ INSTALLED_APPS = [
     'course',
     'api',
     'rest_framework',
+    'core',
+
 ]
 
 MIDDLEWARE = [
@@ -75,6 +78,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'akirachix.wsgi.application'
+ACCOUNT_ACTIVATION_DAYS=30
 
 
 # Database
@@ -124,5 +128,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+LOGIN_REDIRECT_URL="/"
 STATIC_URL = '/static/'
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR,'student/student_image')
+MEDIA_ROOT=os.path.join(BASE_DIR,'teacher/teacher_image')
 django_heroku.settings(locals())
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'wambuinganga',
+        'USER': 'postgres',
+        'PASSWORD': 'wambuinganga',
+        'HOST': 'localhost',
+        'PORT': '5433',
+    }
+}

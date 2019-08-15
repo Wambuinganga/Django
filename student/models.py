@@ -14,14 +14,14 @@ class Student(models.Model):
 	id_number=models.IntegerField()
 	date_joined=models.DateField()
 	courses=models.ManyToManyField(Course)
-	image=models.ImageField(upload_to="image",blank=True)
+	image=models.ImageField(upload_to="student_image",blank=True)
 
 	def __str__(self):
 		return self.first_name
 
-class Profile(models.Model):
-   name = models.CharField(max_length = 50)
-   picture = models.ImageField(upload_to = 'pictures')
+# class Profile(models.Model):
+#    name = models.CharField(max_length = 50)
+#    picture = models.ImageField(upload_to = 'pictures')
 
-   class Meta:
-      db_table = "profile"
+#    class Meta:
+#       db_table = "profile"

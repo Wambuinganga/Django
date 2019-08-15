@@ -13,7 +13,7 @@
 			<th>Phone</th>
 			<th>Email</th>
 			<th>Date-Joined</th>
-			<th>ID</th>
+			<!-- <th>ID</th> -->
 			{% for teacher in teachers%}
 			<tr>
 				<td>{{teacher.first_name}}</td>
@@ -23,7 +23,7 @@
 				<td>{{teacher.phone_number}}</td>
 				<td>{{teacher.email}}</td>
 				<td>{{teacher.date_joined}}</td>
-				<td>{{teacher.id_number}}</td>
+				<!-- <td>{{teacher.id_number}}</td> -->
 			</tr>
 		{%endfor%}
 	</table>
