@@ -2,23 +2,44 @@
 <html>
 <head>
 	<title>Welcome!!</title>
-</head>
-<body>
-	{% if user.is_authenticated %}
-	Welcome Home {{user.name}} !
-	<br>
-	<br>
-	<a href="accounts/logout/">Logout</a>
-	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
 
-	{% else%}
-	You are new here! 
+</head>
+
+<body>
+
+	<style>
+body {
+	background-color:	#C0C0C0;
+
+}
+p{
+	color:#800080;
+	font-family: 'Kaushan Script', cursive;
+	font-size: 40px;
+	margin-left: 250px;
+	margin-top: 50px;
+}
+
+	</style>
+	{% if user.is_authenticated %}
+	<p background="">AKIRACHIX PYTHON CLASS{{user.name}} </p>
+	<p>Are you new here? <a href="accounts/register/">Register</a> 
+	<br>
+	<br> 
+	Already have an account? <a href="accounts/login/">Login</a></p>
+	<br>
+	<br>
+<!-- 	<button type="button" class="btn btn-secondary" ><a href="accounts/logout/">Logout</a></button>
+ -->	{% else%}
+	<p>You are new here! </p>
 	<br>
 	<br>
 	Please<a href="accounts/register/">Register</a>
 	<br>
 	<br>
-	or <a href="accounts/login/">Login</a>
+	or<a href="accounts/login/">Login</a>
 
 	{% endif %}
 
